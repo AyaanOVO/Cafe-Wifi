@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="">
+    <p class="heading" style="text-align: center; margin-bottom: 50px;">Delete a shop by using the cafe id from our database <br> and please prove api-key as well.</p>
+    <form action="{{ url_for('delete_cafe') }}" method="post" style="padding-left: 300px; padding-bottom: 208px;">
+        {{ form.csrf_token }}
+        {{ form.Cafe_id.label(class="form-label") }} <br> {{ form.Cafe_id(class="form-control") }} <br> <br>
+        {{ form.api_key.label(class="form-label") }} <br> {{ form.api_key(class="form-control") }} <br> <br>
+        {{ form.submit(class="btn btn-secondary") }}
+    </form>
+</div>
+{% endblock %}

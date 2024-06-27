@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="particular-cafe-shop" style="margin: 0px;">
+    <img class="particular-shop" src="{{ img_url }}" alt="Shop-img">
+</div>
+
+
+<div class="shop-name-headline">
+    <span style="font-size: 2.1rem; font-weight: bold; letter-spacing: 2px;">{{ shop_name.upper() }}</span>
+    <i class="fa-solid fa-star fa-xl font-star" style="color: #FFD43B;"></i>
+    <i class="fa-solid fa-star fa-xl font-star" style="color: #FFD43B;"></i>
+    <i class="fa-solid fa-star fa-xl font-star" style="color: #FFD43B;"></i>
+</div>
+
+
+<div class="container-fluid features-images text-center" style="padding-top: 200px;">
+  <div class="row">
+    <div class="col-12" style="position: relative; right:70px; margin-bottom: 80px;">
+<!--        <h3 style="margin-right: 105px; padding-bottom: 50px; font-weight: bold">PRODUCTIVITY</h3>-->
+        <img class="call-img" src="../static/images/calls.jpeg" alt="Calls-img">
+        <span class="cafe-text">Can Take Calls</span>
+        <span style="position: relative; right: 238px; bottom: 30px;">Donec egestas purus sit amet turpis porttitor, eu eleifend eros hendrerit. Sed suscipit laoreet augue </span>
+
+    </div>
+      <div class="col-12" style="position: relative; margin-bottom: 80px;">
+          <span class="cafe-text" style="position: relative; left: 510px;">Have Wifi Support </span>
+          <span style="position: relative; right: 30px ; bottom: 30px;">Donec egestas purus sit amet turpis porttitor, eu eleifend eros hendrerit </span>
+          <img class="call-img" src="../static/images/wifi.png" alt="Wifi-img">
+      </div>
+      <div class="col-12" style="position: relative; right: 100px;">
+          <img class="call-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHl5K8JcT8GJOChCjJYa1Yw3H0QSYBN3lcLQ&s" alt="Toilet-img">
+          <span class="cafe-text">Have Toilet</span>
+          <span style="position: relative; right: 189px; bottom: 30px;">Donec egestas purus sit amet turpis porttitor, eu eleifend eros hendrerit. Sed suscipit laoreet augue </span>
+      </div>
+      <div class="col-12" style="position: relative; margin-top: 100px; margin-bottom: 80px;">
+          <span class="cafe-text" style="position: relative; left: 510px;">Have Multiple Socket</span>
+          <span style="position: relative; right: 30px; bottom: 30px;">Donec egestas purus sit amet turpis porttitor, eu eleifend eros hendrerit</span>
+          <img class="call-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAth0WYx8Ss1qPHd8Bft0bLxax65Nio8E-dQ&s" alt="Socket-img">
+      </div>
+  </div>
+</div>
+
+
+<hr style="bottom: 800px;">
+
+<hr style="bottom: 40px;">
+{% endblock %}

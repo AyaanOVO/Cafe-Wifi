@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container heading">
+    <p>
+        The best work and study-friendly cafes, restaurants, libraries, and hotel lobbies in London. Find venues with free and reliable Wi-Fi hotspots, ample power sockets, and comfy seating areas.
+    </p>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row align-items-start">
+      {% for shop in list_of_shops: %}
+          <div class="col-xxl-4 col-xl-6 col-md-12 img-block">
+              <button class="image-button" onclick="window.location.href='{{ url_for('detail_shop', id=shop.id, img_url=shop.img_url) }}'">
+                  <img class="all_shop_img" src="{{ shop.img_url }}" alt="Shop-image"> <br>
+                  <p class="shop-name"> {{ shop.name }} </p>
+                  <i class="fa-solid fa-location-arrow"></i>
+                  {{ shop.location }}
+              </button>
+          </div>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+
+
+</html>

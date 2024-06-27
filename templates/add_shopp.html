@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% from 'bootstrap/form.html' import render_form %}
+
+{% block body %}
+
+<div style="padding-bottom: 130px;">
+    <p class="heading" style="text-align: center; margin-bottom: 50px;">Add a new cafe shop and provide features of it and images url and all. You can <br> provide rating as well in out website </p>
+    <form style="margin-left: 300px" action="{{ url_for('add_shop') }}" method="post">
+        {{ form.csrf_token }}
+        {{ form.name.label(class="form-label") }} <br> {{ form.name(class="form-control") }} <br> <br>
+        {{ form.coffee_price.label(class="form-label") }} <br> {{ form.coffee_price(class="form-control") }} <br> <br>
+        {{ form.map_url.label(class="form-label") }} <br> {{ form.map_url(class="form-control") }} <br><br>
+        {{ form.img_url.label(class="form-label") }} <br> {{ form.img_url(class="form-control") }} <br><br>
+        {{ form.seats.label(class="form-label") }} <br> {{ form.seats(class="form-control") }}<br><br>
+        {{ form.location.label(class="form-label") }} <br> {{ form.location(class="form-control") }}<br> <br>
+
+        {{ form.has_wifi.label(class="form-label") }} &nbsp; {{ form.has_wifi(class="form-check-input") }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {{ form.has_socket.label(class="form-label") }} &nbsp; {{ form.has_socket(class="form-check-input") }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {{ form.has_toilet.label(class="form-label") }} &nbsp; {{ form.has_toilet(class="form-check-input") }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {{ form.can_take_calls.label(class="form-label") }} &nbsp; {{ form.can_take_calls(class="form-check-input") }} <br><br><br>
+        {{ form.submit(class="btn btn-secondary") }}
+    </form>
+</div>
+
+{% endblock %}
